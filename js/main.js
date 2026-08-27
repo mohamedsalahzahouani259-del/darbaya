@@ -29,62 +29,32 @@ if (menuBtn && mobileMenu) {
   });
 }
 
-// Image Lightbox Gallery
+// Image Lightbox Gallery (Simple Open/Close only)
 const galleryFigures = document.querySelectorAll('#galerie figure');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');
-const lightboxPrev = document.getElementById('lightbox-prev');
-const lightboxNext = document.getElementById('lightbox-next');
 
-let currentIndex = 0;
-const images = [];
-
-// Populate image list
-galleryFigures.forEach((fig, index) => {
-  const imgEl = fig.querySelector('img');
-  if (imgEl) {
-    images.push({
-      src: imgEl.getAttribute('src'),
-      alt: imgEl.getAttribute('alt')
-    });
-    
+if (galleryFigures && lightbox && lightboxImg) {
+  galleryFigures.forEach(fig => {
     fig.addEventListener('click', () => {
-      currentIndex = index;
-      showImage(currentIndex);
-      lightbox.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
+      const imgEl = fig.querySelector('img');
+      if (imgEl) {
+        const src = imgEl.getAttribute('src');
+        const alt = imgEl.getAttribute('alt');
+        lightboxImg.setAttribute('src', src);
+        lightboxImg.setAttribute('alt', alt);
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
     });
-  }
-});
-
-function showImage(index) {
-  if (index >= 0 && index < images.length) {
-    lightboxImg.setAttribute('src', images[index].src);
-    lightboxImg.setAttribute('alt', images[index].alt);
-  }
+  });
 }
 
 if (lightboxClose) {
   lightboxClose.addEventListener('click', () => {
     lightbox.classList.add('hidden');
     document.body.style.overflow = '';
-  });
-}
-
-if (lightboxPrev) {
-  lightboxPrev.addEventListener('click', (e) => {
-    e.stopPropagation();
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-  });
-}
-
-if (lightboxNext) {
-  lightboxNext.addEventListener('click', (e) => {
-    e.stopPropagation();
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
   });
 }
 
