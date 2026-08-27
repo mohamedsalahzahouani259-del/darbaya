@@ -1,29 +1,22 @@
-# Welcome to your Lovable project
+# Dar Baya | Restaurant Tunisien à Sousse – Cuisine Traditionnelle
 
-This project was built with [Lovable](https://lovable.dev).
+Ce dépôt contient le site web vitrine du restaurant **Dar Baya** à Sousse, réalisé en **HTML5, CSS3 (Tailwind CSS) et JavaScript Vanilla (pur)**.
 
-## Build with Lovable
+Il s'agit d'un site statique ultra-rapide, léger, optimisé pour le référencement (SEO) et totalement dépourvu de frameworks ou de dépendances lourdes (pas de React, pas de Node, pas de build complexe).
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+---
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+## 🎨 Fonctionnalités
 
-## Development
+- **Responsive Design** : Adapté pour tous les types d'écrans (smartphones, tablettes, ordinateurs).
+- **Menu interactif** : Affichage complet de la carte en dinars tunisiens.
+- **Galerie d'images avec Diaporama (Lightbox)** : Cliquez sur une photo de la galerie pour l'ouvrir en grand format (navigation par flèches et touche `Échap`).
+- **Menu mobile dynamique** : Tenu par un script Vanilla JS ultra-léger.
+- **SEO Optimisé** : Métadonnées complètes, structure sémantique claire, plan du site (`sitemap.xml`) et données structurées JSON-LD de type `Restaurant`.
+- **Zéro erreur de console** : Aucun problème d'hydratation.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+---
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## 💻 Comment tester localement
 
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+Double-cliquez simplement sur le fichier `index.html` à la racine pour ouvrir le site dans n'importe quel navigateur, ou lancez un serveur HTTP local simple.
